@@ -1,0 +1,11 @@
+---
+followmee:
+  username: user123
+  device_id: device123
+  api_key: apikey123
+google:
+  api_key: apikey123
+paths:
+  dropbox: /home/username/Dropbox/Locations
+  project: /home/username/Projects/pytrack
+timezone: 'US/Central'
