@@ -19,7 +19,6 @@ This script requires:
       to update the report stylesheet.
     - The wkhtmltopdf library (http://wkhtmltopdf.org).
     - A Python virtualenv environment in ./venv
-    - A temporary directory in ./tmp
 
 To run, just copy config.yml.dist to config.yml, change
 the variables, and you should be good to go!
