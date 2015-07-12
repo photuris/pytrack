@@ -87,6 +87,7 @@ def main():
     """
     Main routine.
 
+    - Ensure ./tmp directory exists.
     - Fetch tracking data from followmee.
     - Write data to CSV file in temporary folder.
     - For each row, query street address information
@@ -99,6 +100,10 @@ def main():
       folder.
     - Copy CSV and PDF report to Dropbox location.
     """
+    # Check for ./tmp, and create it if necessary
+    if not os.path.exists('./tmp'):
+        os.makedirs('./tmp')
+
     print('Fetching Data...')
 
     # Download followmee data from the past 24 hours
