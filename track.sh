@@ -3,8 +3,10 @@
 export PATH="/usr/local/bin:/opt/local/bin:$PATH"
 
 # read yaml config file
-. parse_yaml.sh
-eval $(parse_yaml config.yml "config_")
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+. $DIR/parse_yaml.sh
+eval $(parse_yaml $DIR/config.yml "config_")
 
 # activate python environment
 cd $config_paths_project
