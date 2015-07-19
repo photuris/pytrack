@@ -151,6 +151,8 @@ def main():
     os.unlink('./tmp/%s.html' % day_str)
 
     shutil.copy2('./tmp/%s.pdf' % day_str, DROPBOX_PATH)
+    shutil.copy2('./tmp/%s.pdf' % day_str, "%s/%s" %
+                                           (DROPBOX_PATH, '~Today.pdf'))
     shutil.copy2('./tmp/%s.csv' % day_str_lower, DROPBOX_CSV_PATH)
 
 

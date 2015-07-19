@@ -4,6 +4,8 @@ Generate a report of your daily whereabouts.
 
 This script requires:
 
+  - Python 3
+
   - A GPS-enabled smartphone (obviously), with the
     Followmee app enabled and active.
 
