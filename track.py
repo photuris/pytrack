@@ -63,6 +63,7 @@ M_URL = 'https://maps.googleapis.com/maps/api/staticmap?size=620x620'
 # -----------
 DROPBOX_PATH = config['paths']['dropbox']
 PROJECT_PATH = config['paths']['project']
+DROPBOX_CSV_PATH = '%s/csv' % DROPBOX_PATH
 
 # -------------------
 # - Date formatting -
@@ -150,7 +151,7 @@ def main():
     os.unlink('./tmp/%s.html' % day_str)
 
     shutil.copy2('./tmp/%s.pdf' % day_str, DROPBOX_PATH)
-    shutil.copy2('./tmp/%s.csv' % day_str_lower, DROPBOX_PATH)
+    shutil.copy2('./tmp/%s.csv' % day_str_lower, DROPBOX_CSV_PATH)
 
 
 def query_geocode(latitude, longitude):
