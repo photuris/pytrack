@@ -175,7 +175,13 @@ def query_geocode(latitude, longitude):
 
     response = urlopen(geocode_url).read().decode('utf-8')
 
-    return json.loads(response)['results'][0]['formatted_address'][:-5]
+    addr = json.loads(response)['results']
+
+    if isinstance(addr, list):
+        if len(addr) > 0 and 'formatted_address' in addr[0]:
+            return addr[0]['formatted_address'][:-5]
+
+    return ''
 
 
 def fetch_map_image(url):
