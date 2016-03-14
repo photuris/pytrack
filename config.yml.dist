@@ -1,11 +1,16 @@
 ---
 followmee:
+  url: http://www.followmee.com/api
   username: user123
   device_id: device123
   api_key: apikey123
 google:
   api_key: apikey123
+  geocode_url: https://maps.googleapis.com/maps/api/geocode
+  map_url: https://maps.googleapis.com/maps/api/staticmap?size=620x620
 paths:
-  dropbox: /home/username/Dropbox/Locations
+  targets:
+    - /home/username/Dropbox/Locations
+    - /home/username/Dropbox/Locations_2
   project: /home/username/Projects/pytrack
 timezone: 'US/Central'
